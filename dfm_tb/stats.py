@@ -35,6 +35,7 @@ def get_steigers_z(df, corr_method):
     - pandas
     - scipy.stats.norm
     - itertools.combinations
+    - dfm_tb.utilities.format_pval_flt 
     """
 
     # Steiger's Z test designed for pearson correlation coefficients [1,2]

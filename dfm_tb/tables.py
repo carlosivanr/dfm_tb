@@ -1,3 +1,7 @@
+import pandas as pd
+import numpy as np
+from great_tables import GT, md, html, style
+
 # /////////////////////////////////////////////////////////////////////////////
 # Define a function that generates frequency and proportions of one column
 def freq_prop(df: pd.DataFrame, column: str) -> GT:
@@ -10,6 +14,10 @@ def freq_prop(df: pd.DataFrame, column: str) -> GT:
 
     Returns:
         GT: A GT table object.
+
+    Dependencies:
+    - pandas
+    - great_tables
     """
     if column not in df.columns:
         raise ValueError(f"Column '{column}' not found in dataframe.")
@@ -47,6 +55,10 @@ def all_apply(df: pd.DataFrame, columns: list, group_title: str, sort_by_percent
 
     Returns:
         GT: A GT table object.
+
+    Dependencies:
+    - pandas
+    - GT
     """
     if not columns:
       raise ValueError("Column list cannot be empty.")
