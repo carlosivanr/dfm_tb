@@ -13,10 +13,6 @@ def format_pval_flt(p, digits):
     Returns:
     Formatted string
     """
-    # should change the name to format_pval_flt
-    # if isinstance(p, np.ndarray):
-    #     p = p.item()  # Extracts the first element as a float
-
     # Set default number of digits if none provided
     if digits is None:
         digits = 4
