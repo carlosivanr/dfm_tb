@@ -53,7 +53,7 @@ def pull_report(token, id, type):
 
 # /////////////////////////////////////////////////////////////////////////////
 # Convert timestamps to date
-def pull_report(data):
+def convert_timestamps(data):
     """
     Convert timestamps from a RedCap data set to date format.
 
