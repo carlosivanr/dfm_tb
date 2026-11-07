@@ -1,9 +1,11 @@
-import pandas as pd
-import numpy as np
-from itertools import combinations
-from scipy.stats import norm
-from dfm_tb.utilities import format_pval_flt
 from collections import Counter
+from itertools import combinations
+
+import numpy as np
+import pandas as pd
+from dfm_tb.utilities import format_pval_flt
+from scipy.stats import norm
+
 
 def get_steigers_z(df, corr_method):
     """
