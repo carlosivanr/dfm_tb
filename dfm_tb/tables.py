@@ -1,9 +1,9 @@
-import numpy as np
 import pandas as pd
 from great_tables import GT, html, loc, md, style
 
+
 # /////////////////////////////////////////////////////////////////////////////
-def tbl_summary(
+def py_summary(
     df: pd.DataFrame,
     by: str | None = None,
     digits: int = 1,
