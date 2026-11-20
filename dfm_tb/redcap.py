@@ -46,7 +46,10 @@ def pull_report(token, id, type):
     r = requests.post('https://redcap.ucdenver.edu/api/', data = form_data, verify=False)
 
     # Convert the redcap data to a DataFrame
-    df = pd.read_csv(StringIO(r.text), low_memory = False)
+    # n.b. It is possible that some RedCap data responses are "None", to prevent
+    # pandas from interpreting these as missing values, change the default na
+    # behavior
+    df = pd.read_csv(StringIO(r.text), low_memory = False, keep_default_na=False, na_values=[''])
 
     return df
 
